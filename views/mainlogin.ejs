@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>LOGIN</title>
+</head>
+<link rel="stylesheet" type="text/css" href="bootstrap.css">
+<link rel="stylesheet" type="text/css" href="mainlogin_background.css">
+<script type="text/javascript" src="/jquery-2.1.4.js"></script>
+<script type="text/javascript" src="/incorrectuserdetails.js"></script>
+<body>
+<!-- JQUERY -->
+
+
+
+
+<ul  class="nav " style="margin-top:16px;">
+	<li class="nav-item" style="margin-left:2%;" >
+    <button class="list-group-item list-group-item-primary" ><a href="/">My Pharmacy</a></button>
+    
+  </li>
+  
+  
+ <li class="nav-item" style="margin-left:2%;">
+        <button class="list-group-item list-group-item-primary" type="button" ><a href="/register">Register</a></button>
+  </li></ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <center style="margin-left:500px;margin-right:500px;margin-top:40px;padding-bottom:40px;background-color:#f7f7f7;border-radius:70px;">
+<h1 style="margin-top:90px;">Login</h1>
+<form method="post" action="/login" style="margin-top:60px;">
+	
+ <div class="form-group">
+   
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="email" style="width:250px;" required>
+    <br>
+  </div>
+  <div class="form-group">
+   
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter Password" name="pass" style="width:250px;" required>
+  </div>
+    <br>
+   
+<% if(correct!=""){%>
+	<h5><%=correct %></h5>
+	<%}%>
+
+
+  <button type="submit" class="btn btn-primary" onclick="send();">LOGIN</button>
+</form></center>
+</body>
+</html>

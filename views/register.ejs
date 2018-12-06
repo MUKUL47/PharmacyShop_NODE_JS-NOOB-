@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>REGISTER</title>
+</head>
+<link rel="stylesheet" type="text/css" href="bootstrap.css">
+<link rel="stylesheet" type="text/css" href="mainlogin_background.css">
+<body> 
+
+
+
+
+
+
+
+
+
+
+<ul  class="nav " style="margin-top:16px;">
+  <li class="nav-item" style="margin-left:2%;" >
+    <button class="list-group-item list-group-item-primary" ><a href="/">My Pharmacy</a></button>
+    
+  </li>
+  
+ <li class="nav-item" style="margin-left:2%;">
+        <button class="list-group-item list-group-item-primary" type="button" ><a href="/login">Sign In</a></button>
+  </li></ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <center style="margin-left:500px;margin-right:500px;margin-top:40px;padding-bottom:40px;background-color:#f7f7f7;border-radius:70px;">
+<h1 style="margin-top:90px;">Register</h1>
+<form method="post" action="/register" style="margin-top:60px;">
+	
+ <div class="form-group">
+   <input type="text" class="form-control" id="exampleInputtext1"  placeholder="Enter name" name="name" style="width:250px;" required>
+    <br>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="email" style="width:250px;" required>
+    <br>
+ 
+
+   
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter Password" name="pass" style="width:250px;" required>
+    <%if(email_exist==true){%>
+    <br><h5>This email already exist</h5>
+    <%}%>
+    <br>
+  <button type="submit" class="btn btn-primary">REGISTER</button>
+   </div>
+</form></center>
+</body>
+</html>

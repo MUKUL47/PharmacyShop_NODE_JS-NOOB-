@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>REQUESTS</title>
+</head>
+<link rel="stylesheet" type="text/css" href="bootstrap.css">
+<link rel="stylesheet" type="text/css" href="request.css">
+<body>
+
+<%if(username!=""){%>
+  <ul  class="nav " style="margin-top:16px;">
+  <li class="nav-item" style="margin-left:2%;" >
+    <button class="list-group-item list-group-item-primary" ><a href="/">My Pharmacy</a></button>
+    
+  </li>
+  <li class="nav-item" style="margin-left:49.5%;">
+    <h3 class="font-weight-bold"><%=username.toUpperCase() %></h3>
+    
+  </li>
+    <li class="nav-item" style="margin-left:2%;">
+        <button class="list-group-item list-group-item-primary" type="button" ><a href="/myrequest">My requests</a></button>
+  </li>
+   <li class="nav-item" style="margin-left:2%;">
+        <button class="list-group-item list-group-item-primary" type="button" ><a href="/logout">Logout</a></button>
+  </li>
+ 
+</ul>
+ <%}%>  <table class="table table-hover table-dark" id="req">
+  <thead>
+    <tr>
+      <th  >NO#</th>
+      <th >Medicine Name</th>
+      <th >Reason</th>
+      <th >Quantity</th>
+      <th >Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+   <%for(var i=0;i<y.length;i++){%>
+      <tr><th id=<%=id1%>><%=i+1%></th>
+      <th id=<%=id1%>><%=y[i]%></th>
+       <th id=<%=id1%>><%=z[i]%></th>
+        <th id=<%=id1%>><%=z1[i]%></th>
+          <th id=<%=id1%>><%=z11[i]%></th>
+      </tr>
+
+      <%}%>
+
+
+  <!-- <tr>
+    <th>1</th>
+     </tr>
+      <tr>
+    <th>1</th>
+     </tr>
+      <tr>
+    <th>1</th>
+     </tr> -->
+  </tbody>
+</table>
+</body>
+</html>

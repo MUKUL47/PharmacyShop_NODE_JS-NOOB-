@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contact</title>
+</head>
+<link rel="stylesheet" type="text/css" href="bootstrap.css">
+<link rel="stylesheet" type="text/css" href="contact.css">
+
+<body>
+	<%if(username==""){%>
+<ul  class="nav " style="margin-top:16px;">
+	<li class="nav-item" style="margin-left:2%;" >
+    <button class="list-group-item list-group-item-primary" ><a href="/">My Pharmacy</a></button>
+    
+  </li>
+  <li class="nav-item" style="margin-left:67%;">
+    <button class="list-group-item list-group-item-primary" ><a href="/login">Sign In</a></button>
+    
+  </li>
+ 
+ <li class="nav-item" style="margin-left:2%;">
+        <button class="list-group-item list-group-item-primary" type="button" ><a href="/register">Register</a></button>
+  </li></ul>
+  <%}%>
+  <!-- SOME USER LOGGED IN -->
+<%if(username!=""){%>
+  <ul  class="nav " style="margin-top:16px;">
+	<li class="nav-item" style="margin-left:2%;" >
+    <button class="list-group-item list-group-item-primary" ><a href="/">My Pharmacy</a></button>
+    
+  </li>
+  <li class="nav-item" style="margin-left:49.5%;">
+    <h3 class="font-weight-bold"><%=username.toUpperCase() %></h3>
+    
+  </li>
+    <li class="nav-item" style="margin-left:2%;">
+        <button class="list-group-item list-group-item-primary" type="button" ><a href="/myrequest">My requests</a></button>
+  </li>
+   <li class="nav-item" style="margin-left:2%;">
+        <button class="list-group-item list-group-item-primary" type="button" ><a href="/logout">Logout</a></button>
+  </li>
+ 
+</ul>
+ <%}%>
+	<center><h2 style="margin-top:40px; color:cyan">FEEDBACK</h2></center>
+	<br><br><form method="post" action="/contact">
+		<%if(logged_in==false){%>
+  <div class="form-group">
+
+    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter your email" name="email">
+    
+  </div>
+  <%}%>
+
+  <div class="form-group">
+
+    <input type="text" class="form-control" id="comment" placeholder="Enter your comment..." name="comment" required>
+
+<br>
+  <button type="submit" id="a" class="btn btn-primary">Submit</button>
+
+
+</form>
+  <br> 
+<%if(contact_message!=""){%>
+<center><h4 style="color:white"><%= contact_message %></h4></center>
+<%}%>
+ <br> 
+<%if(comments.length>0){%>
+  <%comments.forEach(function(i){%>
+  <div class=com id=<%=i.id %> ><h4>  Name : <%=i.name%></h4>  <h4>Comment : <%=i.comment%></h4> </div>
+ <br> 
+<%})};%>
+	
+
+
+
+	
+
+</body>
+</html>

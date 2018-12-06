@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>REQUESTS</title>
+</head>
+<link rel="stylesheet" type="text/css" href="bootstrap.css">
+<link rel="stylesheet" type="text/css" href="request.css">
+<body>
+
+<ul  class="nav " style="margin-top:16px;">
+	<li class="nav-item" style="margin-left:2%;" >
+    <button class="list-group-item list-group-item-primary" ><a href="/">My Pharmacy</a></button>
+    
+  </li>
+  <li class="nav-item" style="margin-left:49.5%;">
+    <h3 class="font-weight-bold">Welcome ADMIN</h3>
+     <li class="nav-item" style="margin-left:2%;">
+        <button class="list-group-item list-group-item-primary" type="button" ><a href="/logout">Logout</a></button>
+  </li>
+  </li>
+  </ul>
+
+   <table class="table table-hover table-dark" id="req">
+  <thead>
+    <tr>
+      <th  >Name</th>
+      <th >Medicine Name</th>
+      <th >Reason</th>
+      <th >Quantity</th>
+      <th >Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+   <%for(var i=0;i<y.length;i++){%>
+      <tr><th ><%=y[i]%></th>
+      
+      </tr>
+
+      <%}%>
+
+
+  </tbody>
+</table>
+
+</body>
+</html>

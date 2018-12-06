@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>REQUESTS</title>
+</head>
+<link rel="stylesheet" type="text/css" href="bootstrap.css">
+<link rel="stylesheet" type="text/css" href="request.css">
+<body>
+
+
+
+   <table class="table table-hover table-dark" id="req">
+  <thead>
+    <tr>
+      <th >#</th>
+      <th >Name</th>
+      <th >Email</th>
+      <th >Medicine Name</th>
+      <th >Reason</th>
+      <th >Quantity</th>
+      <th >Status</th>
+      <th>Modify</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%var x=1;%>
+      <%for(var i=0;i<y.length;i++){ %>
+       <%for(var j=0;j<y[i]['medname'].length;j++){%>
+      <tr>
+     
+      <th ><%=x++%></th>
+      <th ><%=y[i]['name']%></th>
+      <th ><%=y[i]['email']%></th>
+      <th ><%=y[i]['medname'][j]%></th>
+      <th ><%=y[i]['reason'][j]%></th>
+      <th ><%=y[i]['quantity'][j]%></th>
+      <th ><%=y[i]['status'][j]%></th>
+      <th ><a href="/<%=y[i]['_id']%>/<%=j%>">Change status</a></th>
+      </tr>
+<%}}%>
+
+
+  </tbody>
+</table>
+
+</body>
+</html>

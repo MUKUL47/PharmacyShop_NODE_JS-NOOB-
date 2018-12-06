@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PHARMACY</title>
+</head>
+<link rel="stylesheet" type="text/css" href="bootstrap.css">
+<link rel="stylesheet" type="text/css" href="frontpage.css">
+<body>
+	<!-- NO USER LOGGEDIN  -->
+<%if(username==""){%>
+<ul  class="nav " style="margin-top:16px;">
+	<li class="nav-item" style="margin-left:2%;" >
+    <button class="list-group-item list-group-item-primary" ><a href="/">My Pharmacy</a></button>
+    
+  </li>
+  <li class="nav-item" style="margin-left:67%;">
+    <button class="list-group-item list-group-item-primary" ><a href="/login">Sign In</a></button>
+    
+  </li>
+ 
+ <li class="nav-item" style="margin-left:2%;">
+        <button class="list-group-item list-group-item-primary" type="button" ><a href="/register">Register</a></button>
+  </li></ul>
+  <%}%>
+  <!-- SOME USER LOGGED IN -->
+<%if(username!=""){%>
+  <ul  class="nav " style="margin-top:16px;">
+	<li class="nav-item" style="margin-left:2%;" >
+    <button class="list-group-item list-group-item-primary" ><a href="/">My Pharmacy</a></button>
+    
+  </li>
+  <li class="nav-item" style="margin-left:49.5%;">
+    <h3 class="font-weight-bold"><%=username.toUpperCase() %></h3>
+    
+  </li>
+    <li class="nav-item" style="margin-left:2%;">
+        <button class="list-group-item list-group-item-primary" type="button" ><a href="/myrequest">My requests</a></button>
+  </li>
+   <li class="nav-item" style="margin-left:2%;">
+        <button class="list-group-item list-group-item-primary" type="button" ><a href="/logout">Logout</a></button>
+  </li>
+ 
+</ul>
+ <%}%>
+	<img src="frontpage_background1.jpg" id="background_img">
+	<%if(message!=""){%>
+		<center><h4><%=message%></h4></center>
+		<%}else{%>
+			<center><h4><%=message%></h4></center>
+		<%}%>
+
+	<ul  class="nav " style="margin-top:38px;">
+	<li class="nav-item" style="margin-left:35%;" >
+    <button class="list-group-item list-group-item-primary" ><a href="/contact">Contact</a></button>
+    
+  </li>
+  <li class="nav-item" style="margin-left:2%;">
+    <button class="list-group-item list-group-item-primary" type="button"><a href="/show">Medicine</a></button>
+    
+  </li>
+   <li class="nav-item" style="margin-left:2%;">
+        <button class="list-group-item list-group-item-primary" type="button" ><a href="/request">Request Medicine</a></button>
+  </li>
+</ul>
+
+</body>
+</html>
